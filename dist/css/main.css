@@ -1,0 +1,422 @@
+*:where(::before, ::after) {
+  box-sizing: border-box;
+}
+
+ul, ol, p, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+
+:where(ul, ol) > li {
+  list-style: none;
+}
+
+::-moz-selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+::selection {
+  background: #b3d4fc;
+  text-shadow: none;
+}
+
+body {
+  color: #4e5150;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+[class*=-btn] {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+.image {
+  display: block;
+  max-width: 100%;
+  border-style: none;
+  height: auto;
+}
+
+.max-wrapper {
+  max-width: 992px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.checkout-section {
+  padding: 5% 0;
+}
+
+.formblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 4rem;
+}
+
+.checkoutbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+
+.checkout-form {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+  padding: 0 5% 0 5%;
+}
+@media only screen and (min-width: 992px) {
+  .checkout-form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    gap: 4rem;
+    padding: 0;
+  }
+  .checkout-form > .formbox {
+    -webkit-box-ordinal-group: 0;
+    -webkit-order: -1;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+  .checkout-form > .totalbox {
+    -webkit-align-self: flex-start;
+        -ms-flex-item-align: start;
+            align-self: flex-start;
+  }
+}
+.checkout-form > .totalbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 3rem;
+  border-radius: 0.5rem;
+  background: #f2f2f2;
+  padding: 1.5rem;
+}
+
+.orderbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1.5rem;
+}
+.orderbox > .itembox {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  gap: 1.5rem;
+}
+.orderbox > .itembox > .imagebox > .image {
+  border-radius: 1rem;
+}
+.orderbox > .itembox > .contentbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1rem;
+}
+.orderbox > .itembox > .contentbox > .infobox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.2rem;
+}
+.orderbox > .itembox > .contentbox > .infobox > .title {
+  font-size: 1.1rem;
+}
+.orderbox > .itembox > .contentbox > .infobox > .current-price {
+  font-weight: bold;
+  color: #f2994a;
+}
+.orderbox > .itembox > .contentbox > .infobox > .current-price > .previous-price {
+  font-size: 0.7rem;
+  text-decoration: line-through;
+  color: #4e5150;
+}
+.orderbox > .itembox > .contentbox > .number-spinner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 0.01rem solid #acacac;
+  border-radius: 0.6rem;
+  -webkit-align-self: flex-start;
+      -ms-flex-item-align: start;
+          align-self: flex-start;
+}
+.orderbox > .itembox > .contentbox > .number-spinner > .decrease-btn,
+.orderbox > .itembox > .contentbox > .number-spinner > .increase-btn {
+  background: #e0e0e0;
+  padding: 0 0.2rem;
+  border-radius: 0.2rem;
+}
+.orderbox > .itembox > .contentbox > .number-spinner > .decrease-btn.-disabled,
+.orderbox > .itembox > .contentbox > .number-spinner > .increase-btn.-disabled {
+  opacity: 0.5;
+}
+.orderbox > .itembox > .contentbox > .number-spinner > .number {
+  text-align: center;
+  border: 0;
+  background: transparent;
+  width: 4rem;
+}
+.orderbox > .itembox > .contentbox > .number-spinner > .number:focus {
+  outline: 0;
+}
+
+.receiptbox .title {
+  font-size: 1rem;
+}
+.receiptbox > .shippingbox,
+.receiptbox > .resultbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem 0;
+  border-top: 0.01rem solid #d0d0d0;
+}
+
+.formbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 2rem;
+}
+.formbox .title {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+.formbox .label {
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.contactbox > .inputgroup,
+.shippingbox > .inputgroup {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+.contactbox > .inputgroup > .inputbox,
+.shippingbox > .inputgroup > .inputbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 0.3rem;
+}
+.contactbox > .inputgroup > .inputbox > .inputblock,
+.shippingbox > .inputgroup > .inputbox > .inputblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 0.01rem solid #acacac;
+  border-radius: 0.6rem;
+}
+.contactbox > .inputgroup > .inputbox > .inputblock > input,
+.shippingbox > .inputgroup > .inputbox > .inputblock > input {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 0;
+}
+.contactbox > .inputgroup > .inputbox > .inputblock > input:focus,
+.shippingbox > .inputgroup > .inputbox > .inputblock > input:focus {
+  outline: 0;
+}
+
+.shippingbox .checkout-btn {
+  padding: 0.5rem 1rem;
+  border-radius: 0.3rem;
+  background: #f2994a;
+  color: #fff;
+  -webkit-transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out, -webkit-transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 150ms ease;
+  transition: background 250ms ease-in-out, transform 150ms ease, -webkit-transform 150ms ease;
+}
+.shippingbox .checkout-btn:focus, .shippingbox .checkout-btn:hover {
+  opacity: 0.7;
+}
+.shippingbox .checkout-btn:active {
+  -webkit-transform: scale(0.99);
+      -ms-transform: scale(0.99);
+          transform: scale(0.99);
+}
+.shippingbox > .inputgroup > .btnblock {
+  -webkit-align-self: flex-end;
+      -ms-flex-item-align: end;
+          align-self: flex-end;
+}
+.shippingbox > .inputgroup > .checkblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: baseline;
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  gap: 0.5rem;
+}
+.shippingbox > .inputgroup > .two-column {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+@media only screen and (min-width: 600px) {
+  .shippingbox > .inputgroup > .two-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.shippingbox > .inputgroup > .two-column > .columnbox > .inputblock {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border: 0.01rem solid #acacac;
+  border-radius: 0.6rem;
+}
+.shippingbox > .inputgroup > .two-column > .columnbox > .inputblock > input,
+.shippingbox > .inputgroup > .two-column > .columnbox > .inputblock > .country {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  border: 0;
+  background: transparent;
+}
+.shippingbox > .inputgroup > .two-column > .columnbox > .inputblock > input:focus,
+.shippingbox > .inputgroup > .two-column > .columnbox > .inputblock > .country:focus {
+  outline: 0;
+}
+
+.footerbox > .description {
+  opacity: 0.7;
+  text-align: center;
+}

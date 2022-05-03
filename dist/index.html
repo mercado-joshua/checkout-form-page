@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page Challenge</title>
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/fontawesome.css">
+    <link rel="stylesheet" href="css/main.css">
+    <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+    <div class="checkout-section">
+        <div class="max-wrapper">
+            <div class="formblock">
+                <div class="checkoutbox">
+                    <h2 class="title">Checkout</h2>
+    
+                    <form action="" class="checkout-form" data-js-checkout-form>
+                        <div class="totalbox">
+                            <div class="orderbox">
+                                <div class="itembox">
+                                    <div class="imagebox">
+                                        <img src="./images/photo1.png" alt="" class="image">
+                                    </div>
+    
+                                    <div class="contentbox">
+                                        <div class="infobox">
+                                            <h3 class="title">Vintage Backbag</h3>
+                                            <p class="current-price">$54.99 <span class="previous-price">$94.99</span></p>
+                                        </div>
+    
+                                        <div data-js-number-spinner class="number-spinner">
+                                            <button data-js-spinner-btn type="button" class="decrease-btn"><i class="icon fa-solid fa-minus"></i></button>
+                                            <input 
+                                                data-js-spinner-number 
+                                                type="number" 
+                                                class="number" 
+                                                value="1" 
+                                                readonly
+                                            >
+                                            <button data-js-spinner-btn type="button" class="increase-btn"><i class="icon fa-solid fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- .itembox ends -->
+    
+                                <div class="itembox">
+                                    <div class="imagebox">
+                                        <img src="./images/photo2.png" alt="" class="image">
+                                    </div>
+    
+                                    <div class="contentbox">
+                                        <div class="infobox">
+                                            <h3 class="title">Levi Shoes</h3>
+                                            <p class="current-price">$74.99 <span class="previous-price">$124.99</span></p>
+                                        </div>
+    
+                                        <div data-js-number-spinner class="number-spinner">
+                                            <button data-js-spinner-btn type="button" class="decrease-btn"><i class="icon fa-solid fa-minus"></i></button>
+                                            <input 
+                                                data-js-spinner-number 
+                                                type="number" 
+                                                class="number" 
+                                                value="1" 
+                                                readonly
+                                            >
+                                            <button data-js-spinner-btn type="button" class="increase-btn"><i class="icon fa-solid fa-plus"></i></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- .itembox ends --> 
+                            </div>
+                            <!-- .orderbox ends -->
+    
+                            <div class="receiptbox">
+                                <div class="shippingbox">
+                                    <h3 class="title">Shipping</h3>
+                                    <p class="price">$19</p>    
+                                </div>
+    
+                                <div class="resultbox">
+                                    <h3 class="title">Total</h3>
+                                    <p class="price">$148.98</p>    
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .totalbox ends -->
+    
+                        <div class="formbox">
+                            <section class="contactbox">
+                                <h3 class="title">Contact Information</h3>
+    
+                                <div class="inputgroup">
+                                    <div class="inputbox">
+                                        <label for="email" class="label">Email</label>
+                                        <div class="inputblock">
+                                            <i class="icon fa-solid fa-envelope"></i>
+                                            <input 
+                                                type="email" 
+                                                name="email" 
+                                                id="email" 
+                                                placeholder="Enter your email..." 
+                                                data-js-email
+                                                required
+                                            >
+                                        </div>
+                                    </div>
+    
+                                    <div class="inputbox">
+                                        <label for="phone" class="label">Phone - <i>e.g 935-493-9600</i></label>
+                                        <div class="inputblock">
+                                            <i class="icon fa-solid fa-phone"></i>
+                                            <input 
+                                                type="tel" 
+                                                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+                                                name="phone" 
+                                                id="phone" 
+                                                placeholder="Enter your phone..." 
+                                                data-js-phone
+                                                required
+                                            >
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+    
+                            <section class="shippingbox">
+                                <h3 class="title">Shipping Address</h3>
+    
+                                <div class="inputgroup">
+                                    <div class="inputbox">
+                                        <label for="fullname" class="label">Full Name</label>
+                                        <div class="inputblock">
+                                            <i class="icon fa-solid fa-user"></i>
+                                            <input 
+                                                type="text" 
+                                                name="fullname" 
+                                                id="fullname" 
+                                                placeholder="John Doe" 
+                                                data-js-fullname
+                                                pattern="[A-Za-z ]+"
+                                                required
+                                            >
+                                        </div>
+                                    </div>
+    
+                                    <div class="inputbox">
+                                        <label for="address" class="label">Address</label>
+                                        <div class="inputblock">
+                                            <i class="icon fa-solid fa-house"></i>
+                                            <input 
+                                                type="text" 
+                                                name="address" 
+                                                id="address" 
+                                                placeholder="Your address..." 
+                                                data-js-address
+                                                required
+                                            >
+                                        </div>
+                                    </div>
+    
+                                    <div class="inputbox">
+                                        <label for="city" class="label">City</label>
+                                        <div class="inputblock">
+                                            <i class="icon fa-solid fa-city"></i>
+                                            <input 
+                                                type="text" 
+                                                name="city" 
+                                                id="city" 
+                                                placeholder="Your city..." 
+                                                data-js-city
+                                                required
+                                            >
+                                        </div>
+                                    </div>
+    
+                                    <div class="inputbox two-column">
+                                        <div class="columnbox">
+                                            <label for="country" class="label">Country</label>
+                                            <div class="inputblock">
+                                                <i class="icon fa-solid fa-earth-americas"></i>
+                                                <select 
+                                                    class="country" 
+                                                    name="country" 
+                                                    id="country" 
+                                                    data-js-country
+                                                    required
+                                                >
+                                                    <option value="" disabled selected>Your country...</option>
+                                                    <option value="austria">Austria</option>
+                                                    <option value="belarus">Belarus</option>
+                                                    <option value="china">China</option>
+                                                    <option value="philippines">Philippines</option>
+                                                    <option value="ukraine">Ukraine</option>
+                                                    <option value="russia">Russia</option>
+                                                </select>
+                                            </div>
+                                        </div>
+    
+                                        <div class="columnbox">
+                                            <label for="postal" class="label">Postal Code</label>
+                                            <div class="inputblock">
+                                                <i class="icon fa-solid fa-city"></i>
+                                                <input 
+                                                    type="text" 
+                                                    name="postal" 
+                                                    id="postal" 
+                                                    placeholder="Your postal code..." 
+                                                    data-js-postal
+                                                    required
+                                                >
+                                            </div>
+                                        </div>
+                                    </div>
+    
+                                    <div class="inputbox checkblock">
+                                        <input type="checkbox" name="save">
+                                        <p class="description">Save this information for next time</p>
+                                    </div>
+    
+                                    <div class="inputbox btnblock">
+                                        <button class="checkout-btn">Continue</button>
+                                    </div>
+    
+                                </div>
+                            </section>
+                        </div>
+                        <!-- .inputbox ends -->
+                    </form>
+                    <!-- .checkout-form ends -->
+                </div>
+                <!-- .checkoutbox ends -->
+    
+                <footer class="footerbox">
+                    <p class="description">created by Josh - devChallenges.io</p>
+                </footer>
+                <!-- .footerbox ends -->
+            </div>
+            <!-- .formblock ends -->
+        </div>
+    </div>
+    <!-- .checkout-section ends -->
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/polyfill.js"></script>
+    <script src="js/behaviors/input-spinner.js"></script>
+    <script src="js/behaviors/checkout-form.js"></script>
+</body>
+</html>
